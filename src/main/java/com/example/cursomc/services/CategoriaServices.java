@@ -1,7 +1,6 @@
 package com.example.cursomc.services;
 
 import java.util.Optional;
-import java.util.List;
 
 import com.example.cursomc.domain.Categoria;
 import com.example.cursomc.repositories.CategoriaRepository;
