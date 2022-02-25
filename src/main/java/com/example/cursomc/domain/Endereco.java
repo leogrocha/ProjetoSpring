@@ -24,8 +24,11 @@ public class Endereco implements Serializable {
 
     // Relacionamento com as demais classes.
     @ManyToOne
-    @JoinColumn(name="cidade_id")
+    @JoinColumn(name="cliente_id")
     private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name="cidade_id")
     private Cidade cidade;
 
     public Endereco(){
