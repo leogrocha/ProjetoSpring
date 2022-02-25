@@ -24,20 +24,20 @@ public class Endereco implements Serializable {
     private String bairro;
     private String cep;
 
-    // Relacionamento com as demais classes.
     @JsonBackReference
-    @ManyToOne
-    @JoinColumn(name="cliente_id")
-    private Cliente cliente;
-
-    @ManyToOne
-    @JoinColumn(name="cidade_id")
-    private Cidade cidade;
+	@ManyToOne
+	@JoinColumn(name="cliente_id")
+	private Cliente cliente;
+	
+	@ManyToOne
+	@JoinColumn(name="cidade_id")
+	private Cidade cidade;
 
     public Endereco(){
 
     }
 
+    // Endereco e1 = new Endereco(null, "Rua Flores", "300", "Apto 303", "Jardim", "38220834", cli1, c1);
 
     public Endereco(Integer id, String logradouro, Integer numero, String complemento,
     String bairro, String cep, Cliente cliente, Cidade cidade){
