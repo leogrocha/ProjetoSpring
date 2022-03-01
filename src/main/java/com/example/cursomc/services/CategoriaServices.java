@@ -1,6 +1,7 @@
 package com.example.cursomc.services;
 
 import java.util.Optional;
+import java.util.List;
 
 import com.example.cursomc.domain.Categoria;
 import com.example.cursomc.repositories.CategoriaRepository;
@@ -42,6 +43,10 @@ public class CategoriaServices {
         } catch(DataIntegrityViolationException e){
             throw new DataIntegrityException("Não é possível excluir uma categoria que possui produtos");
         }
+    }
+
+    public List<Categoria> findAll(){
+        return repo.findAll();
     }
 
 }
