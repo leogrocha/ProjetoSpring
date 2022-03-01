@@ -23,4 +23,9 @@ public class CategoriaServices {
             Categoria.class.getName()));
     }
 
+    public Categoria insert(Categoria obj){
+        obj.setId(null); // processo para verificar que realmente o id não existe informado ele como nulo.
+        return repo.save(obj);
+    }
+
 }
